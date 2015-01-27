@@ -1,7 +1,12 @@
-<h1>Users</h1>
+@extends('layouts.master')
+@section('titulo')
+  Users
+@stop
  
-<ul>
-  @foreach($users as $users)
-    <li>{{ $users->name.' '.$users->last_name }} </li>
-  @endforeach 
-</ul>
+ @section('contenido')
+  <ul>
+    @foreach($users as $users)
+      <li>{{ $users->name.' '.$users->last_name }} </li>
+    @endforeach 
+  </ul>
+ @stop
